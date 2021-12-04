@@ -1,0 +1,22 @@
+Order(folder)利用Connection來進行資料庫的連線，也要在WEB-INF-lib-掛mysql-connector-java
+新增 查詢 修改 刪除利用PreparedStatement ResultSet Connection SQL語法來寫
+最後用webapp與Controller進行資料傳輸
+
+
+
+gjun(folder)
+pom.xml掛mysql-connector和hibernate-core maven
+連線資料庫利用EntityManager配合META-INF裡面的persistence.xml來進行連線
+利用SQL語法和EntityTransaction來寫新增 查詢 修改 刪除語法
+最後用webapp與Controller進行資料傳輸
+
+
+Spring2(folder)
+pom.xml掛mysql-connector hibernate-core strtus和springframework maven
+連線資料庫利用Session與hibernate.cfg.xml來進行連線
+寫sp1.xml與sp2.xml給implDao掛上
+static ApplicationContext a1=new ClassPathXmlApplicationContext("sp1.xml");
+static ApplicationContext a2=new ClassPathXmlApplicationContext("sp2.xml");
+利用Session連線,Transaction來寫新增 查詢 修改 刪除語法
+Controller寫一個java能get到Model裡面的屬性資料，最後加上一個method寫struts(要寫struts.xml同時web.xml也要補上struts的data)
+最後用webapp跟Controller裡的Model連動
